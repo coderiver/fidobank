@@ -72,6 +72,7 @@ body
 	height: 100%
 	padding: 50px 25px
 	+vertical
+	overflow: auto
 
 .in
 	display: inline-block
@@ -102,13 +103,15 @@ body
 		float: right
 		margin-top: 100px
 		font-size: 28px
-		color: #888 
+		color: #888
+		text-transform: uppercase
 		span
 			+fb
 			color: $cl 
 
 .conditions
 	margin-bottom: 20px
+	padding-top: 15px
 	.conditions__title
 		margin-bottom: 40px
 		font-size: 27px
@@ -142,11 +145,61 @@ body
 
 .copy
 	+fl
-	font-size: 16px
+	font-size: 12px
 	color: #838383 
+
+.fieldset
+	margin-bottom: 20px
+	padding-bottom: 10px
+	border-bottom: 1px solid #D8DDDF
+	box-shadow: 0 1px 0 0 #fff
 
 .field
 	margin-bottom: 9px
+	.field__label
+		margin-bottom: 9px
+		padding: 0 11px
+		font-size: 18px
+	.field__select
+		position: relative
+		width: 100%
+		&.has-error
+			.field__val
+				border-color: rgb(185, 74, 72)
+		&:after
+			content: ""
+			position: absolute
+			top: 11px
+			right: 9px
+			+arr(16,13,$cl,b)
+		select
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			-webkit-appearance: none
+			opacity: 0 
+			z-index: 2 
+	.field__val
+		height: 34px
+		padding: 0 10px
+		background: #FFF
+		border: 1px solid #AEB2B4
+		+f
+		font-size: 18px
+		line-height: 34px
+	.field__select_w135
+		float: left
+		width: 135px
+		margin-left: 10px
+		&:first-child
+			margin: 0
+	.help-block
+		display: block
+		padding: 5px 11px
+		color: rgb(185, 74, 72)
+		line-height: 1
 
 .input
 	width: 100%
@@ -156,10 +209,116 @@ body
 	border: 1px solid #AEB2B4
 	+f
 	font-size: 18px
-	+placeholder-color(#898989) 
+	+placeholder-color(#898989)
 
+.btn
+	width: 100%
+	height: 57px
+	background-color: #718A01
+	+g(#B1D700, #718A01)
+	border-radius: 9px
+	+f
+	font-size: 28px
+	color: #fff 
 
+.slider
+	.slider__left
+		float: left
+		width: 285px
+	.slider__title
+		margin-bottom: 11px
+		font-size: 18px
+		text-transform: uppercase
+		line-height: 1
+	.slider__right
+		float: right
+		width: 115px
+	.slider__text
+		margin-bottom: 10px
+		font-size: 12px
+		line-height: 1
+	.slider__scale
+		font-size: 0
+		li
+			position: relative
+			display: inline-block
+			padding-top: 9px
+			vertical-align: top
+			font-size: 12px
+			text-align: center
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: 50%
+				width: 1px
+				height: 6px
+				background: $cl 
+			&:nth-child(1)
+				width: 15%
+				text-align: left
+				&:before
+					left: 0
+			&:nth-child(2),
+			&:nth-child(4)
+				width: 19%
+			&:nth-child(3)
+				width: 31%
+			&:nth-child(5)
+				width: 16%
+				text-align: right
+				&:before
+					left: auto
+					right: 0
+	.field
+		margin-bottom: 4px
+	.field__in
+		display: block
+		position: relative
+		span
+			position: absolute
+			top: 1px
+			right: 0
+			bottom: 0
+			padding-right: 10px
+			line-height: 34px
+			+fb
+			font-size: 18px 
+			color: #A1BC23 
+	.input
+		padding: 0 42px 0 5px
+		+fb
+		color: #A1BC23 
+		text-align: right
+	.ui-slider
+		position: relative
+		height: 6px
+		margin-bottom: 5px
+		background: #FFF
+		box-shadow: inset 0.3px 1px 1px rgba(0, 0, 0, 0.25)
+		z-index: 2 
+	.ui-slider-range
+		position: absolute
+		top: 0
+		left: 0
+		height: 6px
+		+g(#ced7a5, #576a01)
+	.ui-slider-handle
+		position: absolute
+		top: -8px
+		width: 20px
+		height: 20px
+		margin-left: -10px
+		background-color: #748D01
+		border: 2px solid #FFF
+		box-shadow: 0.6px 1.9px 5px rgba(0, 0, 0, 0.75)
+		border-radius: 50%
+		+g(#ced7a5, #576a01)
+		cursor: pointer
 
+.msg
+	font-size: 20px
+	text-align: center
 
 
 
