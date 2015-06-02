@@ -8,7 +8,7 @@ $(document).ready(function() {
 		range: 'min',
 		value: 7500,
 		min: 1000,
-		max: 100000,
+		max: 50000,
 		step: 100,
 		slide: function( event, ui ) {
 		    slValue.val(String(ui.value).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '));
