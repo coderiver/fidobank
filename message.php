@@ -60,6 +60,6 @@
 	</div>
 </div>
 <!-- Salesdoubler -->
-<script type="text/javascript" src="//rdr.salesdoubler.com.ua/in/pixel/787/tracking.js?sale_amount={SALE_AMOUNT}&trans_id={TRANS_ID}"></script>
+<script type="text/javascript" src="//rdr.salesdoubler.com.ua/in/pixel/787/tracking.js?trans_id={<?php echo $user_code; ?>}"></script>
 </body>
 </html>
