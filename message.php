@@ -12,7 +12,7 @@
 	$msg_success = 'Спасибо! Ваша заявка успешно отправлена. Менеджер по выдаче кредитов свяжется с вами в ближайшее время.';
 	$msg_error = 'Извините, у нас отсутствуют предложения по кредитованию для Вас';
 	
-	$recipient = "arturmorozv@gmail.com";
+	$recipient = "arismiatov@profdigital.com.ua";
 	$subject = "Fidobank";
 	$mailheader = "From: $subject \r\n";
 
