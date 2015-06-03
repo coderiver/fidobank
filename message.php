@@ -13,8 +13,11 @@
 	$msg_error = 'Извините, у нас отсутствуют предложения по кредитованию для Вас';
 	
 	$recipient = "arismiatov@profdigital.com.ua";
+	// $recipient = "arturmorozv@gmail.com";
 	$subject = "Fidobank";
 	$mailheader = "From: $subject \r\n";
+
+	$content = "Имя: ".$user_name."\r\nИНН: ".$user_code."\r\nТелефон: ".$user_phone."\r\n Дата рождения: ".$user_day.".".$user_month.".".$user_year."\r\nТрудоустройство: ".$user_status."\r\nСумма кредита: ".$user_money."грн";
 
 ?>
  
@@ -47,11 +50,11 @@
 				$ms = $date - $birthdate_ms;
 				$age = $ms / 31536000;
 
-				if ($user_status == 'status4' || $user_status == 'status5' || $age < 22 || $age > 65) {
+				if ($user_status == 'Работаю не официально' || $user_status == 'Не трудоустроен' || $age < 22 || $age > 65) {
 					echo $msg_error;
 				}
 				else {
-					mail($recipient, $subject, $msg_success, $mailheader) or die("Error!");
+					mail($recipient, $subject, $content, $mailheader) or die("Error!");
 					echo $msg_success;
 				}
 
